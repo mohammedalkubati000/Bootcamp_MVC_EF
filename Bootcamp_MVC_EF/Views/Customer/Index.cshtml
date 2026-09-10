@@ -1,0 +1,28 @@
+﻿@model IList<Bootcamp_MVC_EF.Models.Customer>
+
+<div class="container">
+    <h2>Customers List</h2>
+    <a href="/Customers/Create" class="btn btn-primary mb-3">Add New Customer</a>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var cust in Model)
+            {
+                <tr>
+                    <td>@cust.Id</td>
+                    <td>@cust.Name</td>
+                    <td>@cust.Email</td>
+                    <td>@cust.Phone</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

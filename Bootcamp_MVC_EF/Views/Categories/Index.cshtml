@@ -1,0 +1,24 @@
+﻿@model IList<Bootcamp_MVC_EF.Models.Category>
+
+<div class="container">
+    <h2>Categories List</h2>
+    <a href="/Categories/Create" class="btn btn-primary mb-3">Add New Category</a>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var cat in Model)
+            {
+                <tr>
+                    <td>@cat.Id</td>
+                    <td>@cat.Name</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

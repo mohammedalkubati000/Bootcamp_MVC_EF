@@ -1,0 +1,28 @@
+﻿@model IList<Bootcamp_MVC_EF.Models.Product>
+
+<div class="container">
+    <h2>Products List</h2>
+    <a href="/Products/Create" class="btn btn-primary mb-3">Add New Product</a>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Category</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var prod in Model)
+            {
+                <tr>
+                    <td>@prod.Id</td>
+                    <td>@prod.Name</td>
+                    <td>@prod.Price</td>
+                    <td>@prod.CategoryName</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
